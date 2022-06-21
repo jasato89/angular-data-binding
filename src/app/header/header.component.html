@@ -1,7 +1,14 @@
-<div class="header-component">
+<div class="header-component" [ngStyle]="{'background-color': backgroundColor, 'color': color}">
     <h1>{{title}}</h1>
     <h2>{{date}}</h2>
-    <input type="text" [placeholder]="placeholder" id="input">
-    <button [disabled]="isDisabled" (click)="showAlert()">Este botón a veces no funciona</button>
+    <p *ngIf="textArea == ''">El texto está vacío</p>
+    <input type="text" [placeholder]="placeholder" id="input"[(ngModel)] = "textArea">
+    <button [disabled]="isDisabled" (click)="addElement()">Este botón a veces no funciona</button>
     <button (click)="disableButton()">Este botón anula al anterior</button>
+    <p>{{textArea}}</p>
+    <ul>
+        <li  *ngFor="let element of elements">{{element}}</li>
+    </ul>
+
+    <button (click)="enableDarkMode()">{{darkText}}</button>
 </div>
