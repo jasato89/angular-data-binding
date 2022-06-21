@@ -18,7 +18,8 @@ export class TextEditorComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  increaseSize(): void {
+  increaseSize(event: Event): void {
+    console.log((<HTMLInputElement>event.target).name);
     this.fontSize++;
   }
   decreaseSize(): void {
