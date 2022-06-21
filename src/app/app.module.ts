@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MenuComponent } from './menu/menu.component';
 import { BodyComponent } from './body/body.component';
 import { FormsModule } from '@angular/forms';
+import { TextEditorComponent } from './text-editor/text-editor.component';
 
 @NgModule({
   declarations: [	
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
       HeaderComponent,
       FooterComponent,
       MenuComponent,
-      BodyComponent
+      BodyComponent,
+      TextEditorComponent
    ],
   imports: [
     BrowserModule,

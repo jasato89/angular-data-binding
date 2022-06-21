@@ -9,3 +9,13 @@
     color: rgb(210, 80, 80);
 }
 
+.default{
+    background-color: pink;
+    color: red;
+}
+
+.odd {
+    background-color: aliceblue;
+    color: green;
+}
+

@@ -7,7 +7,7 @@
     <button (click)="disableButton()">Este botón anula al anterior</button>
     <p>{{textArea}}</p>
     <ul>
-        <li  *ngFor="let element of elements">{{element}}</li>
+        <li class="default" [ngClass]="{odd: i%2 == 0}" *ngFor="let element of elements; let i = index">{{element}}</li>
     </ul>
 
     <button (click)="enableDarkMode()">{{darkText}}</button>

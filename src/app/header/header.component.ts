@@ -17,6 +17,7 @@ export class HeaderComponent implements OnInit {
   color: string;
   isDarkModeEnabled: boolean;
   darkText: string;
+  default: string;
 
   constructor() {
     this.date = new Date().toLocaleDateString("es") + " " + new Date().toLocaleTimeString("es");
@@ -28,6 +29,7 @@ export class HeaderComponent implements OnInit {
     this.color = "black";
     this.isDarkModeEnabled = false;
     this.darkText = "Activar modo oscuro";
+    this.default = "{background-color:red}";
   }
 
   ngOnInit() {
@@ -66,5 +68,6 @@ export class HeaderComponent implements OnInit {
     }
 
   }
+  
 
 }
