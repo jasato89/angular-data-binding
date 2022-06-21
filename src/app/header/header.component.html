@@ -1,7 +1,7 @@
 <div class="header-component">
     <h1>{{title}}</h1>
     <h2>{{date}}</h2>
-    <input type="text" [placeholder]="placeholder">
+    <input type="text" [placeholder]="placeholder" id="input">
     <button [disabled]="isDisabled" (click)="showAlert()">Este botón a veces no funciona</button>
     <button (click)="disableButton()">Este botón anula al anterior</button>
 </div>

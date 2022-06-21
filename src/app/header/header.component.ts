@@ -13,21 +13,23 @@ export class HeaderComponent implements OnInit {
   isDisabled: boolean;
 
   constructor() {
-    this.date = new Date().toLocaleDateString("es");
+    this.date = new Date().toLocaleDateString("es") + " " + new Date().toLocaleTimeString("es");
     this.placeholder = "Inserta tu texto aqui";
     this.isDisabled = true;
   }
 
   ngOnInit() {
-    
+
   }
+
 
   disableButton() {
     this.isDisabled = !this.isDisabled;
   }
 
   showAlert(){
-    window.alert("Me has alertado");
+    const input = document.getElementById('input') as HTMLInputElement | null;
+    window.alert(input?.value);
   }
 
 }
